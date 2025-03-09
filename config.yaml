@@ -1,0 +1,77 @@
+baseURL: "https://yourblog.com/"
+languageCode: "en-us"
+title: "AI Research Blog"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "AI Research Blog"
+  description: "A blog about artificial intelligence research and implementations"
+  keywords: [AI, Machine Learning, Deep Learning, Research]
+  author: "Your Name"
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  
+  profileMode:
+    enabled: true
+    title: "AI Research Blog"
+    subtitle: "Exploring the frontiers of artificial intelligence research"
+    imageUrl: "/images/profile.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Posts
+        url: posts
+      - name: About
+        url: about
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/yourusername"
+    - name: twitter
+      url: "https://twitter.com/yourusername"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/yourusername"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40

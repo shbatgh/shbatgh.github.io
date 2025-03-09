@@ -1,57 +1,64 @@
-# hugo-paperMod Example
+# AI Research Blog
 
-This repository offers an example site for [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+A personal blog for AI research summaries and explanations, inspired by [Lillian Weng's blog](https://lilianweng.github.io/).
 
-## Install
+## Setup Instructions
 
-Read Wiki => [hugo-PaperMod - Installation](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)
+### Prerequisites
+- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.80.0 or later)
+- Git
 
-## Directory Tree
+### Local Development
 
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/ai-research-blog.git
+   cd ai-research-blog
+   ```
+
+2. Initialize and update the PaperMod theme submodule:
+   ```bash
+   git submodule init
+   git submodule update
+   ```
+
+3. Start the Hugo development server:
+   ```bash
+   hugo server -D
+   ```
+
+4. View your site at http://localhost:1313/
+
+### Creating New Content
+
+To create a new blog post:
+```bash
+hugo new posts/my-new-post.md
 ```
-.(site root)
-├── configTaxo.yml
-├── config.yml
-├── content
-│   ├── archives.fr.md
-│   ├── archives.md
-│   ├── posts
-│   │   ├── emoji-support.md
-│   │   ├── markdown-syntax.fa.md
-│   │   ├── markdown-syntax.fr.md
-│   │   ├── markdown-syntax.md
-│   │   ├── math-typesetting.md
-│   │   ├── papermod
-│   │   │   ├── _index.md
-│   │   │   ├── papermod-faq.md
-│   │   │   ├── papermod-features
-│   │   │   │   ├── images
-│   │   │   │   │   ├── homeinfo.jpg
-│   │   │   │   │   ├── profile.jpg
-│   │   │   │   │   └── regular.jpg
-│   │   │   │   └── index.md
-│   │   │   ├── papermod-icons.md
-│   │   │   ├── papermod-installation.md
-│   │   │   └── papermod-variables.md
-│   │   ├── placeholder-text.md
-│   │   └── rich-content.md
-│   ├── search.fr.md
-│   ├── search.md
-│   └── tags
-├── LICENSE
-├── README.md
-├── resources
-│   └── _gen
-│       ├── assets
-│       └── images
-├── static
-│   ├── android-chrome-192x192.png
-│   ├── android-chrome-512x512.png
-│   ├── apple-touch-icon.png
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   ├── favicon.ico
-│   └── papermod-cover.png
-└── themes
-    └── hugo-PaperMod
+
+To create a new page:
+```bash
+hugo new page/about.md
 ```
+
+### Building for Production
+
+```bash
+hugo --minify
+```
+
+The static files will be generated in the `public/` directory.
+
+## Deployment
+
+This site can be easily deployed to GitHub Pages, Netlify, or Vercel.
+
+### GitHub Pages Deployment
+
+1. Create a repository named `yourusername.github.io`
+2. Push the contents of the `public/` directory to this repository
+3. Enable GitHub Pages in the repository settings
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,0 +1,45 @@
+baseURL: "https://yourusername.github.io/"
+languageCode: "en-us"
+title: "My Digital Garden"
+theme: "PaperMod"
+
+# PaperMod specific settings
+params:
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  
+  # Added for integration with Quartz
+  assets:
+    disableHLJS: true  # We'll use Quartz's code highlighting
+  
+  # Navigation to Quartz notes section
+  profileMode:
+    enabled: true
+    title: "My Digital Garden"
+    subtitle: "Blog posts and linked notes"
+    buttons:
+      - name: Blog
+        url: "/posts"
+      - name: Notes
+        url: "/notes"
+      - name: Graph View
+        url: "/notes/graph"
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: notes
+      name: Notes
+      url: /notes/
+      weight: 20
+    - identifier: graph
+      name: Graph
+      url: /notes/graph/
+      weight: 30
