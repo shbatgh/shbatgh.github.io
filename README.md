@@ -1,64 +1,56 @@
-# AI Research Blog
+# My Digital Garden with Hugo PaperMod and Obsidian Support
 
-A personal blog for AI research summaries and explanations, inspired by [Lillian Weng's blog](https://lilianweng.github.io/).
+This repository contains a Hugo site configured with the PaperMod theme and additional features to support Obsidian markdown notes and a graph view.
 
 ## Setup Instructions
 
-### Prerequisites
-- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.80.0 or later)
-- Git
+1. Clone this repository
+2. Update `config.yml` with your own information
+3. Start adding content
 
-### Local Development
+## Adding Content
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/ai-research-blog.git
-   cd ai-research-blog
-   ```
+### Manual Method
 
-2. Initialize and update the PaperMod theme submodule:
-   ```bash
-   git submodule init
-   git submodule update
-   ```
-
-3. Start the Hugo development server:
-   ```bash
-   hugo server -D
-   ```
-
-4. View your site at http://localhost:1313/
-
-### Creating New Content
-
-To create a new blog post:
-```bash
-hugo new posts/my-new-post.md
-```
-
-To create a new page:
-```bash
-hugo new page/about.md
-```
-
-### Building for Production
+Create new posts using Hugo's CLI:
 
 ```bash
-hugo --minify
+hugo new posts/my-new-post/index.md
 ```
 
-The static files will be generated in the `public/` directory.
+### From Obsidian Vault
 
-## Deployment
+Use the included Python script to import notes from your Obsidian vault:
 
-This site can be easily deployed to GitHub Pages, Netlify, or Vercel.
+```bash
+# Install required dependencies
+pip install python-frontmatter
 
-### GitHub Pages Deployment
+# Run the conversion script
+python scripts/obsidian_to_hugo.py /path/to/obsidian/vault /path/to/hugo/site
+```
 
-1. Create a repository named `yourusername.github.io`
-2. Push the contents of the `public/` directory to this repository
-3. Enable GitHub Pages in the repository settings
+## Deploying Your Site
 
-## License
+Build your site with:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+```bash
+hugo
+```
+
+This will generate your static site in the `public` directory, which you can then deploy to GitHub Pages, Netlify, or any other hosting provider.
+
+## Features
+
+- Clean, minimalist design with PaperMod theme
+- Knowledge graph visualization of your notes and their connections
+- Support for Obsidian-specific markdown:
+  - WikiLinks (`[[Page Name]]`)
+  - Callouts (`> [!NOTE] Title`)
+  - Embedded images
+
+## Customization
+
+- Modify `assets/css/extended/obsidian.css` to change the appearance of Obsidian elements
+- Adjust the graph visualization in `layouts/page/graph.html`
+- Update the Obsidian compatibility script in `assets/js/obsidian-support.js`

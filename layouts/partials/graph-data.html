@@ -1,0 +1,44 @@
+{{ $graphData := dict "nodes" slice "links" slice }}
+{{ $nodes := slice }}
+{{ $links := slice }}
+{{ $nodeIds := slice }}
+
+{{ range .Site.Pages }}
+  {{ if and (not .Draft) (not .IsHome) (ne .Kind "section") (ne .Kind "taxonomy") (ne .Kind "term") }}
+    {{ $pageNode := dict "id" .RelPermalink "title" .Title "url" .RelPermalink "type" "page" }}
+    {{ $nodes = $nodes | append $pageNode }}
+    {{ $nodeIds = $nodeIds | append .RelPermalink }}
+    
+    {{ range .GetTerms "tags" }}
+      {{ $tagId := printf "tag:%s" .LinkTitle }}
+      {{ if not (in $nodeIds $tagId) }}
+        {{ $tagNode := dict "id" $tagId "title" .LinkTitle "url" .RelPermalink "type" "tag" }}
+        {{ $nodes = $nodes | append $tagNode }}
+        {{ $nodeIds = $nodeIds | append $tagId }}
+      {{ end }}
+      
+      {{ $links = $links | append (dict "source" .RelPermalink "target" $tagId) }}
+    {{ end }}
+    
+    {{ $content := .RawContent }}
+    {{ $wikiLinkRegex := "\\[\\[([^\\]]+)\\]\\]" }}
+    {{ $wikiLinks := findREAll $wikiLinkRegex $content }}
+    
+    {{ range $wikiLinks }}
+      {{ $linkText := replaceRE $wikiLinkRegex "$1" . }}
+      {{ $linkPath := $linkText | urlize }}
+      {{ $linkURL := printf "/%s/" $linkPath }}
+      
+      {{ if not (in $nodeIds $linkURL) }}
+        {{ $linkNode := dict "id" $linkURL "title" $linkText "url" $linkURL "type" "page" }}
+        {{ $nodes = $nodes | append $linkNode }}
+        {{ $nodeIds = $nodeIds | append $linkURL }}
+      {{ end }}
+      
+      {{ $links = $links | append (dict "source" $.RelPermalink "target" $linkURL) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $graphData = dict "nodes" $nodes "links" $links }}
+{{ $graphData | jsonify }}

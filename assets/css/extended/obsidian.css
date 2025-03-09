@@ -1,0 +1,47 @@
+/* WikiLinks */
+a.internal-link {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* Dark mode support */
+.dark a.internal-link {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Obsidian Callouts */
+.callout {
+  border-left: 4px solid;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.callout-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.callout.note {
+  border-color: #448aff;
+}
+
+.callout.info {
+  border-color: #00b8d4;
+}
+
+.callout.warning {
+  border-color: #ff9100;
+}
+
+.callout.danger {
+  border-color: #ff5252;
+}
+
+/* Dark mode support */
+.dark .callout {
+  background-color: rgba(255, 255, 255, 0.05);
+}

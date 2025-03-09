@@ -1,0 +1,3 @@
+---
+url: "/graph-data.json"
+---
