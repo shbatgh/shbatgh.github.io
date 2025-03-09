@@ -1,15 +1,14 @@
-# Install Hugo (if not already installed)
-# On macOS:
-# brew install hugo
-# On Windows:
-# choco install hugo-extended
-
-# Create a new Hugo site
-hugo new site my-digital-garden
+# Clone Quartz repository
+git clone https://github.com/jackyzha0/quartz.git my-digital-garden
 cd my-digital-garden
 
-# Initialize git repository
-git init
+# Remove the .git folder to start fresh
+rm -rf .git
 
-# Add PaperMod theme as git submodule
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+# Initialize as a new git repository
+git init
+git add .
+git commit -m "Initial commit: Quartz base"
+
+# Install dependencies
+npm install
