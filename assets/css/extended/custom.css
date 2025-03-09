@@ -1,0 +1,70 @@
+:root {
+  --content-gap: 1.5rem;
+  --content-max-width: 750px;
+}
+
+.main {
+  max-width: var(--content-max-width);
+}
+
+.post-content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content blockquote {
+  background-color: #f6f8fa;
+  border-left: 4px solid #0366d6;
+  padding: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.post-content code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  padding: 0.2em 0.4em;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.post-content a {
+  color: #0366d6;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.post-content a:hover {
+  border-color: #0366d6;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+.post-content table {
+  margin: 1rem 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.post-content th, .post-content td {
+  padding: 0.5rem;
+  border: 1px solid #eaeaea;
+}
+
+.post-content th {
+  background-color: #f6f8fa;
+}

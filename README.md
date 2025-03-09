@@ -1,66 +1,64 @@
-# My Blog
+# AI Research Blog
 
-This is a simple, clean blog built with Jekyll and GitHub Pages, inspired by Lilian Weng's blog.
+A personal blog for AI research summaries and explanations, inspired by [Lillian Weng's blog](https://lilianweng.github.io/).
 
-## Features
+## Setup Instructions
 
-- Responsive design
-- Support for math equations using MathJax
-- Code syntax highlighting
-- Pagination for blog posts
-- RSS feed
-- Easy customization
+### Prerequisites
+- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.80.0 or later)
+- Git
 
-## Getting Started
+### Local Development
 
-### Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/ai-research-blog.git
+   cd ai-research-blog
+   ```
 
-1. Clone this repository
-2. Install dependencies:
+2. Initialize and update the PaperMod theme submodule:
+   ```bash
+   git submodule init
+   git submodule update
+   ```
+
+3. Start the Hugo development server:
+   ```bash
+   hugo server -D
+   ```
+
+4. View your site at http://localhost:1313/
+
+### Creating New Content
+
+To create a new blog post:
+```bash
+hugo new posts/my-new-post.md
+```
+
+To create a new page:
+```bash
+hugo new page/about.md
+```
+
+### Building for Production
 
 ```bash
-gem install bundler
-bundle install
+hugo --minify
 ```
 
-3. Run the development server:
-
-```bash
-bundle exec jekyll serve
-```
-
-4. Visit `http://localhost:4000` in your browser
-
-### Creating a New Blog Post
-
-Add a new markdown file in the `_posts` directory with the naming convention `YYYY-MM-DD-title.md`:
-
-```
----
-layout: post
-title:  "Your Post Title"
-date:   YYYY-MM-DD HH:MM:SS
-categories: [category1, category2]
----
-
-Your post content goes here. You can use Markdown formatting.
-```
-
-## Customization
-
-- Edit `_config.yml` to update your site details
-- Modify the CSS in `assets/css/main.css` to customize the appearance
-- Update the layouts in the `_layouts` directory
-- Edit the includes in the `_includes` directory
+The static files will be generated in the `public/` directory.
 
 ## Deployment
 
-This blog is designed to be easily deployed to GitHub Pages:
+This site can be easily deployed to GitHub Pages, Netlify, or Vercel.
 
-1. Create a GitHub repository named `yourusername.github.io`
-2. Push your code to the repository
-3. Your site will be available at `https://yourusername.github.io`
+### GitHub Pages Deployment
+
+1. Create a repository named `yourusername.github.io`
+2. Push the contents of the `public/` directory to this repository
+3. Enable GitHub Pages in the repository settings
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the LICENSE file for details.
