@@ -1,5 +1,5 @@
 baseURL: "https://example.com/"
-title: "My Digital Garden"
+title: "Portfolio - Computational Biology & Software Development"
 paginate: 5
 theme: PaperMod
 
@@ -14,9 +14,9 @@ minify:
 
 params:
   env: production
-  title: My Digital Garden
-  description: "My personal knowledge base"
-  keywords: [Blog, Portfolio, Digital Garden]
+  title: Portfolio
+  description: "Computational biologist and software developer specializing in computer vision, 3D cellular analysis, and scientific visualization"
+  keywords: [Portfolio, Computational Biology, Computer Vision, Cell Tracking, 3D Analysis, BioVision, Cellvis]
   author: Your Name
   DateFormat: "January 2, 2006"
   defaultTheme: auto
@@ -51,19 +51,15 @@ params:
 
 menu:
   main:
-    - identifier: archives
-      name: Archives
-      url: /archives/
+    - identifier: home
+      name: Home
+      url: /
       weight: 10
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: projects
+      name: Projects
+      url: /projects/
       weight: 20
     - identifier: tags
       name: Tags
       url: /tags/
       weight: 30
-    - identifier: graph
-      name: Knowledge Graph
-      url: /graph/
-      weight: 40

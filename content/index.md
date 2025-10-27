@@ -1,37 +1,33 @@
 ---
-title: My Digital Garden
+title: Portfolio
 ---
 
-# Welcome to My Digital Garden
+# Welcome to My Portfolio
 
-This is a personal knowledge base built with Quartz and styled to look like Hugo PaperMod. 
+I'm a computational biologist and software developer passionate about leveraging technology to advance biological research. My work combines computer vision, data analysis, and interactive visualization to solve complex problems in cellular biology.
 
-## Features
+## Featured Project
 
-- **Obsidian Compatibility**: Full support for Obsidian markdown syntax, including wikilinks, embeds, and callouts
-- **Graph View**: Visualize connections between your notes
-- **PaperMod Aesthetics**: Clean, minimalist design inspired by the Hugo PaperMod theme
-- **Full-text Search**: Quickly find what you're looking for
-- **Automatic Backlinks**: See which notes link to the current one
+### [Cellvis - BioVision](projects/cellvis)
 
-## Recent Notes
+An end-to-end 3D cellular analysis platform for tracking and analyzing stem cell behavior in Drosophila germaria. This project bridges advanced imaging techniques with computational analysis to make large-scale biological data easier to interpret and quantify.
 
-- [[note-one]]
-- [[note-two]]
-- [[note-three]]
+**Key Features:**
+- 3D segmentation and mesh generation for time-lapse microscopy
+- Automated cell tracking across multiple timepoints
+- Unsupervised clustering to identify cell behavior patterns
+- Interactive GUI for visualization and parameter adjustment
 
-## Getting Started
+[View Project Details →](projects/cellvis)
 
-To add your own Obsidian notes to this site:
+## About Me
 
-1. Place your markdown files in the `content` folder
-2. Run `npx quartz build` to build the site
-3. Access your digital garden at `http://localhost:8080` when running `npx quartz serve`
+I specialize in:
+- **Computational Biology**: Image analysis, cell tracking, and biological data interpretation
+- **Computer Vision**: 3D segmentation, feature extraction, and morphological analysis
+- **Software Development**: Building intuitive tools and GUIs for scientific research
+- **Data Science**: Unsupervised learning and pattern recognition in biological systems
 
-## Customization
+## Get in Touch
 
-You can customize this site by:
-
-1. Editing `quartz.config.ts` for basic configuration
-2. Modifying `quartz/styles/custom.scss` for styling changes
-3. Updating layout components in `components/` folder
+Feel free to explore my work and reach out for collaborations or inquiries.
