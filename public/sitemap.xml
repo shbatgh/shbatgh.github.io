@@ -2,27 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/tags/example/</loc>
+    <loc>https://shbatgh.github.io/tags/3d-analysis/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/tags/cell-tracking/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/projects/cellvis/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/tags/computational-biology/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/tags/computer-vision/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/projects/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/tags/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shbatgh.github.io/tags/example/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/note-one/</loc>
+    <loc>https://shbatgh.github.io/note-one/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/obsidian/</loc>
+    <loc>https://shbatgh.github.io/tags/obsidian/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
-    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+    <loc>https://shbatgh.github.io/graph-data.json</loc>
   </url><url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+    <loc>https://shbatgh.github.io/categories/</loc>
   </url><url>
-    <loc>https://example.com/graph-data.json</loc>
-  </url><url>
-    <loc>https://example.com/categories/</loc>
-  </url><url>
-    <loc>https://example.com/graph/</loc>
-  </url><url>
-    <loc>https://example.com/projects/</loc>
+    <loc>https://shbatgh.github.io/graph/</loc>
   </url>
 </urlset>

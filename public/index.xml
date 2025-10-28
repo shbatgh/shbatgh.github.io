@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Portfolio on Portfolio - Computational Biology &amp; Software Development</title>
-    <link>https://example.com/</link>
+    <link>https://shbatgh.github.io/</link>
     <description>Recent content in Portfolio on Portfolio - Computational Biology &amp; Software Development</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shbatgh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellvis - BioVision</title>
+      <link>https://shbatgh.github.io/projects/cellvis/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://shbatgh.github.io/projects/cellvis/</guid>
+      <description>3D cellular analysis platform for tracking stem cell behavior in Drosophila germaria</description>
+    </item>
     <item>
       <title>Example Note with Obsidian Features</title>
-      <link>https://example.com/note-one/</link>
+      <link>https://shbatgh.github.io/note-one/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/note-one/</guid>
+      <guid>https://shbatgh.github.io/note-one/</guid>
       <description>&lt;h1 id=&#34;example-note&#34;&gt;Example Note&lt;/h1&gt;
 &lt;p&gt;This note demonstrates various Obsidian features that work seamlessly with our Quartz + PaperMod setup.&lt;/p&gt;
 &lt;h2 id=&#34;wiki-links&#34;&gt;Wiki Links&lt;/h2&gt;
@@ -67,35 +74,19 @@ This provides additional information&lt;/p&gt;
     </item>
     <item>
       <title></title>
-      <link>https://example.com/graph-data.json</link>
+      <link>https://shbatgh.github.io/graph-data.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/graph-data.json</guid>
+      <guid>https://shbatgh.github.io/graph-data.json</guid>
       <description></description>
     </item>
     <item>
       <title>Knowledge Graph</title>
-      <link>https://example.com/graph/</link>
+      <link>https://shbatgh.github.io/graph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/graph/</guid>
+      <guid>https://shbatgh.github.io/graph/</guid>
       <description>&lt;p&gt;This visualization shows the connections between all notes in my digital garden.
 Each node represents a note or tag, and each connection represents a link between them.
 Click on any node to navigate to that page.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>https://example.com/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/projects/</guid>
-      <description>&lt;h1 id=&#34;projects&#34;&gt;Projects&lt;/h1&gt;
-&lt;p&gt;Here you&amp;rsquo;ll find a collection of my work in computational biology, computer vision, and scientific software development.&lt;/p&gt;
-&lt;h2 id=&#34;featured-projects&#34;&gt;Featured Projects&lt;/h2&gt;
-&lt;h3 id=&#34;cellvis---biovision&#34;&gt;&lt;a href=&#34;cellvis&#34;&gt;Cellvis - BioVision&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;3D Cellular Analysis Platform&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;An end-to-end computational platform for analyzing 3D time-lapse images of germaria in Drosophila ovaries. Features advanced 3D segmentation, automated cell tracking, unsupervised clustering, and an interactive GUI for visualization.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Technologies:&lt;/strong&gt; Computer Vision, 3D Analysis, Machine Learning, Interactive Visualization&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;cellvis&#34;&gt;Learn More →&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;More projects coming soon&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

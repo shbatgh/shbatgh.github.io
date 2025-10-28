@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Obsidian on Portfolio - Computational Biology &amp; Software Development</title>
-    <link>https://example.com/tags/obsidian/</link>
+    <link>https://shbatgh.github.io/tags/obsidian/</link>
     <description>Recent content in Obsidian on Portfolio - Computational Biology &amp; Software Development</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shbatgh.github.io/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Note with Obsidian Features</title>
-      <link>https://example.com/note-one/</link>
+      <link>https://shbatgh.github.io/note-one/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/note-one/</guid>
+      <guid>https://shbatgh.github.io/note-one/</guid>
       <description>&lt;h1 id=&#34;example-note&#34;&gt;Example Note&lt;/h1&gt;
 &lt;p&gt;This note demonstrates various Obsidian features that work seamlessly with our Quartz + PaperMod setup.&lt;/p&gt;
 &lt;h2 id=&#34;wiki-links&#34;&gt;Wiki Links&lt;/h2&gt;
