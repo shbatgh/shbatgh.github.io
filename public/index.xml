@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Portfolio on Portfolio - Computational Biology &amp; Software Development</title>
+    <link>https://example.com/</link>
+    <description>Recent content in Portfolio on Portfolio - Computational Biology &amp; Software Development</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Note with Obsidian Features</title>
+      <link>https://example.com/note-one/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/note-one/</guid>
+      <description>&lt;h1 id=&#34;example-note&#34;&gt;Example Note&lt;/h1&gt;
+&lt;p&gt;This note demonstrates various Obsidian features that work seamlessly with our Quartz + PaperMod setup.&lt;/p&gt;
+&lt;h2 id=&#34;wiki-links&#34;&gt;Wiki Links&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a link to another note: [[note-two]]&lt;/p&gt;
+&lt;p&gt;You can also use aliases: [[note-three|Check out this other note]]&lt;/p&gt;
+&lt;h2 id=&#34;callouts&#34;&gt;Callouts&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE] Note Callout
+This is a note callout, commonly used in Obsidian&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING] Warning Callout
+This is a warning callout&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!INFO] Information
+This provides additional information&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;embedded-content&#34;&gt;Embedded Content&lt;/h2&gt;
+&lt;p&gt;![[image.png]]&lt;/p&gt;
+&lt;h2 id=&#34;task-lists&#34;&gt;Task Lists&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Completed task&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Incomplete task&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Another task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Header 1&lt;/th&gt;
+          &lt;th&gt;Header 2&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cell 1&lt;/td&gt;
+          &lt;td&gt;Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cell 3&lt;/td&gt;
+          &lt;td&gt;Cell 4&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, world!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;graph-view&#34;&gt;Graph View&lt;/h2&gt;
+&lt;p&gt;The graph view will automatically show connections between this note and others based on links.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.com/graph-data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/graph-data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Knowledge Graph</title>
+      <link>https://example.com/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/graph/</guid>
+      <description>&lt;p&gt;This visualization shows the connections between all notes in my digital garden.
+Each node represents a note or tag, and each connection represents a link between them.
+Click on any node to navigate to that page.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>https://example.com/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/projects/</guid>
+      <description>&lt;h1 id=&#34;projects&#34;&gt;Projects&lt;/h1&gt;
+&lt;p&gt;Here you&amp;rsquo;ll find a collection of my work in computational biology, computer vision, and scientific software development.&lt;/p&gt;
+&lt;h2 id=&#34;featured-projects&#34;&gt;Featured Projects&lt;/h2&gt;
+&lt;h3 id=&#34;cellvis---biovision&#34;&gt;&lt;a href=&#34;cellvis&#34;&gt;Cellvis - BioVision&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;3D Cellular Analysis Platform&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;An end-to-end computational platform for analyzing 3D time-lapse images of germaria in Drosophila ovaries. Features advanced 3D segmentation, automated cell tracking, unsupervised clustering, and an interactive GUI for visualization.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Technologies:&lt;/strong&gt; Computer Vision, 3D Analysis, Machine Learning, Interactive Visualization&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;cellvis&#34;&gt;Learn More →&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;More projects coming soon&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

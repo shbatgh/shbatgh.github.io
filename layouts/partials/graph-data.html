@@ -22,7 +22,7 @@
     
     {{ $content := .RawContent }}
     {{ $wikiLinkRegex := "\\[\\[([^\\]]+)\\]\\]" }}
-    {{ $wikiLinks := findREAll $wikiLinkRegex $content }}
+    {{ $wikiLinks := findRE $wikiLinkRegex $content }}
     
     {{ range $wikiLinks }}
       {{ $linkText := replaceRE $wikiLinkRegex "$1" . }}
