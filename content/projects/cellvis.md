@@ -55,10 +55,15 @@ Scientists can view the mesh animations of the microscopy data using a Blender p
 
 # Clustering
 
+## Data Loading
 ![Data Loading](/images/image1.png)
+## Feature Selection
 ![Feature Selection](/images/image2.png)
+## Clustering Parameters
 ![Clustering Parameters](/images/image3.png)
+## Visualizations
 ![Visualizations](/images/image4.png)
+## UMAP Cluster Visualization
 ![UMAP Cluster Visualization](/images/image5.png)
 
 ## Impact
