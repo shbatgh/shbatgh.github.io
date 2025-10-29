@@ -37,36 +37,33 @@ Scientists can view the mesh animations of the microscopy data using a Blender p
 
 ## Demonstrations
 
-### Video 1: Segmentation and Mesh Generation
-
+# Mesh Visualization
 <video width="100%" controls>
   <source src="/videos/output1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-*This video demonstrates the 3D segmentation process and mesh generation for individual cells.*
-
-### Video 2: Cell Tracking Across Timepoints
 
 <video width="100%" controls>
   <source src="/videos/output2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-*Watch how cells are automatically tracked across different timepoints in the germarium.*
-
-### Video 3: Interactive Clustering Visualization
-
 <video width="100%" controls>
   <source src="/videos/output3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-*Explore the interactive GUI showing clustering results and pattern identification.*
+# Clustering
+
+![Data Loading](/images/image1.png)
+![Feature Selection](/images/image2.png)
+![Clustering Parameters](/images/image3.png)
+![Visualizations](/images/image4.png)
+![UMAP Cluster Visualization](/images/image5.png)
 
 ## Impact
 
-We have worked witht he Kalderon Lab at Columbia University in order to improve our software, and they have already made multiple discoveries and saved lots of time by using our software.
+We have worked with the Kalderon Lab at Columbia University in order to improve our software, and they have already made multiple discoveries and saved lots of time by using our software.
 
 BioVision provides researchers with a powerful tool to:
 - Accelerate biological research by automating tedious manual tracking

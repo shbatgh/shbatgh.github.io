@@ -2,9 +2,6 @@
 title: Portfolio
 ---
 
-# Welcome to My Portfolio
-
-
 ## Featured Project
 
 ### [Cellvis - BioVision](projects/cellvis)
