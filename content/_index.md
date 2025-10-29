@@ -4,7 +4,6 @@ title: Portfolio
 
 # Welcome to My Portfolio
 
-I'm a computational biologist and software developer passionate about leveraging technology to advance biological research. My work combines computer vision, data analysis, and interactive visualization to solve complex problems in cellular biology.
 
 ## Featured Project
 
@@ -12,9 +11,9 @@ I'm a computational biologist and software developer passionate about leveraging
 
 An end-to-end 3D cellular analysis platform for tracking and analyzing stem cell behavior in Drosophila germaria. This project bridges advanced imaging techniques with computational analysis to make large-scale biological data easier to interpret and quantify.
 
-**Key Features:**
-- 3D segmentation and mesh generation for time-lapse microscopy
-- Automated cell tracking across multiple timepoints
+**Features:**
+- 3D segmentation and mesh generation for 3D time-lapse microscopy
+- Automated cell tracking across multiple timepoints through cell matching algorithm
 - Unsupervised clustering to identify cell behavior patterns
 - Interactive GUI for visualization and parameter adjustment
 
@@ -22,12 +21,4 @@ An end-to-end 3D cellular analysis platform for tracking and analyzing stem cell
 
 ## About Me
 
-I specialize in:
-- **Computational Biology**: Image analysis, cell tracking, and biological data interpretation
-- **Computer Vision**: 3D segmentation, feature extraction, and morphological analysis
-- **Software Development**: Building intuitive tools and GUIs for scientific research
-- **Data Science**: Unsupervised learning and pattern recognition in biological systems
-
-## Get in Touch
-
-Feel free to explore my work and reach out for collaborations or inquiries.
+I'm a first-year Computer Science and Math student at UMD, where I spend most of my time thinking about how to make computers help biologists. For the past few years, I've been working on machine learning applications in biological imaging, building tools to analyze and visualize cellular structures and discover meaningful patterns that reveal how cells organize and behave.

@@ -9,7 +9,7 @@ tags: ["computational-biology", "computer-vision", "3d-analysis", "cell-tracking
 
 ## Overview
 
-BioVision is an end-to-end computational platform for analyzing 3D time-lapse images of germaria — the regions in Drosophila ovaries where stem cells divide and differentiate. The goal is to automatically identify and track cells across stacks and timepoints to better understand their behavior and organization.
+BioVision is an end-to-end computational platform for analyzing 3D time-lapse images of germaria (the regions in Drosophila ovaries where stem cells divide and differentiate). The goal is to automatically identify and track cells across stacks and timepoints to better understand their behavior and organization.
 
 ## Project Description
 
@@ -17,32 +17,23 @@ Our project focuses on bridging the gap between advanced microscopy imaging and 
 
 ### The Pipeline
 
-The pipeline starts with **raw microscopy stacks**, which we process using 3D segmentation techniques to isolate individual cells. After segmentation, we generate 3D meshes for each cell to preserve their shapes and spatial context. From these meshes, we extract various morphological and spatial features — such as cell volume, surface area, position, and orientation — which serve as numerical representations of cell behavior over time.
+The pipeline starts with **raw microscopy stacks**, which we process using 3D segmentation techniques to isolate individual cells. After segmentation, we generate 3D meshes for each cell to preserve their shapes and spatial context. From these meshes, we extract various morphological and spatial features — such as cell volume, surface area, position, and orientation which serve as numerical representations of cell behavior over time.
 
 ### Analysis & Clustering
 
-Once features are extracted, we apply **unsupervised clustering algorithms** (like K-means) to group cells with similar properties or behaviors. This helps reveal potential biological patterns, such as regions with coordinated growth or cells transitioning between states.
+Once features are extracted, we apply **unsupervised clustering algorithms** (like K-means and spectral clustering) to group cells with similar properties or behaviors. This helps reveal potential biological patterns, such as regions with coordinated growth or cells transitioning between states.
 
 ### Interactive Visualization
 
-We built the entire system with a **graphical user interface (GUI)** that allows researchers to visualize the segmentation, meshes, and clustering results interactively. Users can explore slices, stacks, or full 3D renderings and adjust clustering parameters on the fly.
+Scientists can view the mesh animations of the microscopy data using a Blender plugin. The clustering results can be viewed through our GUI.
 
 ## Key Features
 
-- **3D Segmentation**: Advanced techniques to isolate individual cells from microscopy stacks
-- **Mesh Generation**: Preservation of cell shapes and spatial context through 3D mesh models
+- **Segmentation and tracking**: We leverage Cellpose-SAM to segment each slice and match cells across slices and timepoints using our cell matching algorithm
+- **Mesh Generation**: Better visualization of cell shapes and spatial context through 3D mesh models
 - **Feature Extraction**: Morphological and spatial analysis (volume, surface area, position, orientation)
-- **Automated Tracking**: Cell identification and tracking across multiple timepoints
-- **Unsupervised Clustering**: K-means and other algorithms to identify behavioral patterns
+- **Unsupervised Clustering**: Clustering algorithms to identify behavioral patterns
 - **Interactive GUI**: Real-time visualization and parameter adjustment
-- **Multi-dimensional Visualization**: Explore data through slices, stacks, or full 3D renderings
-
-## Technical Stack
-
-- **Computer Vision**: 3D segmentation algorithms
-- **Data Processing**: Feature extraction and morphological analysis
-- **Machine Learning**: Unsupervised clustering (K-means)
-- **Visualization**: 3D rendering and interactive GUI development
 
 ## Demonstrations
 
@@ -75,15 +66,13 @@ We built the entire system with a **graphical user interface (GUI)** that allows
 
 ## Impact
 
+We have worked witht he Kalderon Lab at Columbia University in order to improve our software, and they have already made multiple discoveries and saved lots of time by using our software.
+
 BioVision provides researchers with a powerful tool to:
 - Accelerate biological research by automating tedious manual tracking
 - Discover hidden patterns in cellular behavior
 - Quantify complex 3D morphological changes
 - Make data-driven decisions about cell state transitions
-
-## Conclusion
-
-Overall, BioVision bridges imaging and computation, providing an end-to-end tool for 3D cellular analysis that makes large-scale germarium data easier to interpret and quantify. This project demonstrates the power of combining computer vision, machine learning, and interactive visualization to solve real-world biological research problems.
 
 ---
 
