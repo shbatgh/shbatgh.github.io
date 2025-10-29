@@ -23,7 +23,7 @@ params:
   title: Portfolio
   description: "Computational biologist and software developer specializing in computer vision, 3D cellular analysis, and scientific visualization"
   keywords: [Portfolio, Computational Biology, Computer Vision, Cell Tracking, 3D Analysis, BioVision, Cellvis]
-  author: Your Name
+  author: Samuel Boccara
   DateFormat: "January 2, 2006"
   defaultTheme: auto
   disableThemeToggle: false

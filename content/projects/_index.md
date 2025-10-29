@@ -2,8 +2,6 @@
 title: "Projects"
 ---
 
-# Projects
-
 Here you'll find a collection of my work in computational biology, computer vision, and scientific software development.
 
 ## Featured Projects

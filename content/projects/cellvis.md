@@ -1,11 +1,9 @@
 ---
 title: "Cellvis - BioVision"
 description: "3D cellular analysis platform for tracking stem cell behavior in Drosophila germaria"
-date: 2024-01-01
+date: 2025-08-01
 tags: ["computational-biology", "computer-vision", "3d-analysis", "cell-tracking"]
 ---
-
-# Cellvis - BioVision
 
 ## Overview
 
