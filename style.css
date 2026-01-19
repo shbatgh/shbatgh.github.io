@@ -1,0 +1,130 @@
+/* Custom styles for dark/light mode toggle */
+
+/* Smooth transitions for theme switching */
+body,
+body.latex-dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+/* Dark mode custom colors (applied when .latex-dark is on body) */
+body.latex-dark {
+  --body-bg: #1a1a2e;
+  --body-color: #e6e6e6;
+  --link-color: #7eb8da;
+  --link-visited: #a8d4ea;
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+body.latex-dark a {
+  color: var(--link-color);
+}
+
+body.latex-dark a:visited {
+  color: var(--link-visited);
+}
+
+/* Layout improvements */
+body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.9;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  font-size: 0.95rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  line-height: 1.7;
+}
+
+/* Better list styling */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* Section spacing */
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Link hover effects */
+a:hover {
+  opacity: 0.8;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .theme-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
