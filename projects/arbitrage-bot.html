@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam - Arbitrage Trading Bot</title>
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
+</head>
+<body class="latex-dark">
+
+<div class="header">
+    <h1>Sam</h1>
+</div>
+
+<div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+    <button id="dark-mode-toggle">☀</button>
+</div>
+
+<main>
+<article>
+
+<h2>Arbitrage Trading Bot</h2>
+<p class="project-tech">Python, Websockets, REST, NLP</p>
+
+<p>I built a bot that watches two prediction market exchanges, Kalshi and Polymarket, and finds moments when the same event is priced differently on each. When that happens, you can buy on one and sell on the other for a guaranteed profit. The tricky part is doing this fast enough before the prices equalize. My system connects to both exchanges via WebSocket, keeps track of live orderbooks, and sends me an alert on Telegram the moment it spots an opportunity. I spent a lot of time optimizing for speed: the whole detection pipeline runs in under a millisecond once a new price comes in. It also filters out opportunities that are too small to bother with or expire too soon to be worth the hassle.</p>
+
+<h3>Orderbook Data Collection</h3>
+
+<p>I also wanted historical data to backtest strategies and study how these markets behave at a granular level. So I set up a data collection system that pulls L2 orderbook updates (basically every bid and ask change) from Polymarket's top 2,000 markets. It's been running for about 4 months and has collected over 100 million updates. The data gets saved to S3 using Delta Lake, which is like a smarter version of storing CSVs: it handles updates cleanly, compresses well, and lets me query specific time ranges without loading everything into memory.</p>
+
+<h3>How It's Built</h3>
+
+<figure>
+    <img src="../architecture.svg" alt="System architecture diagram">
+</figure>
+
+<p>Everything runs on Python with async code to handle thousands of WebSocket messages per second. The arbitrage detector and data collector both run on AWS EC2. I had to figure out the best server location by testing network latency to both exchanges from different regions. It turns out Polymarket's servers are in London and Kalshi's are on the US East Coast, so I had to find a middle ground. The whole project taught me a lot about real-time systems, working with financial APIs, and managing large-scale data pipelines.</p>
+
+</article>
+</main>
+
+<footer>
+    <div class="social-links">
+        <a href="../resume.pdf">CV</a>
+        <a href="https://github.com/shbatgh">GitHub</a>
+        <a href="https://linkedin.com/in/samuel-boccara-961aa2346">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>

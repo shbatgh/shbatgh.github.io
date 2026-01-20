@@ -1,5 +1,7 @@
-document
-  .querySelector("#dark-mode-toggle")
-  .addEventListener('click', () => {
-     document.body.classList.toggle("latex-dark");
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelector("#dark-mode-toggle")
+    .addEventListener('click', () => {
+       document.body.classList.toggle("latex-dark");
+    });
+});

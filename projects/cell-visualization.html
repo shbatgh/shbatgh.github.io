@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam - Automated 3D Visualization of Cell Behavior</title>
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
+</head>
+<body class="latex-dark">
+
+<div class="header">
+    <h1>Sam</h1>
+</div>
+
+<div class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+    <button id="dark-mode-toggle">☀</button>
+</div>
+
+<main>
+<article>
+
+<h2>Automated 3D Visualization of Cell Behavior</h2>
+<p class="project-tech">Python, PyTorch, Cellpose, NumPy</p>
+
+<h3>Overview</h3>
+<p>BioVision is a sophisticated analysis platform designed to extract meaningful insights from 3D time-lapse microscopy data of Drosophila germaria. The project bridges advanced image processing, computer vision, and machine learning to help researchers understand stem cell division and differentiation.</p>
+
+<h3>Demo Video</h3>
+<video controls style="width: 100%;">
+    <source src="../BioVis1_web.mp4" type="video/mp4">
+</video>
+
+<p>Understanding cellular behavior in 3D time-lapse microscopy data requires processing massive datasets of germaria images, accurately segmenting individual cells across stacks and timepoints, and identifying meaningful patterns in cell organization and dynamics. Manual analysis is time-consuming and prone to inconsistency due to the amount of time it takes to outline hundreds of cells over dozens of timepoints and slices.</p>
+
+<h4>1. 3D Segmentation Pipeline</h4>
+<p>The pipeline begins by segmenting raw microscopy stacks using Cellpose 2D segmentation to isolate individual cells. We then use our cell matching algorithm to group segmentations across timesteps and slices (images at different heights) into one cell that persists across time and space.</p>
+
+<h4>2. Mesh Generation</h4>
+<p>After segmentation, we generate 3D meshes for each identified cell. This mesh-based representation interpolates across the outlines in order to infer cell shape and morphology allowing scientists to more easily understand the spatial context within the tissue and temporal changes in cell structure.</p>
+
+<h4>3. Feature Extraction</h4>
+<p>We extract morphological, spatial, and temporal features using our 3D meshes:</p>
+<ul>
+    <li><strong>Morphological:</strong> cell volume, surface area, shape descriptors</li>
+    <li><strong>Spatial:</strong> position, orientation, neighborhood relationships</li>
+    <li><strong>Temporal:</strong> velocity, acceleration</li>
+</ul>
+<p>These features serve as numerical representations of cell behavior over time.</p>
+
+<h4>4. Unsupervised Clustering</h4>
+<p>We apply clustering algorithms (K-means, spectral, and HDBSCAN) to group cells with similar properties or behaviors. This reveals regions with coordinated growth patterns, cells transitioning between developmental states, and spatial organization principles.</p>
+
+<h3>Interactive Visualization</h3>
+<p>The software rendering is a Blender add-on, which allows scientists to easily visualize segmentation results in 2D slices and 3D renderings, explore generated meshes interactively, and analyze the organisms behavior.The platform includes a GUI that enables researchers to easily perform clustering analysis.</p>
+
+<h3>Impact</h3>
+<p>BioVision makes germarium data easier to interpret and quantify, enabling researchers to:</p>
+<ul>
+    <li>Identify cellular patterns that would be invisible to manual analysis</li>
+    <li>Quantify cell behaviors objectively</li>
+    <li>Test hypotheses about developmental processes</li>
+    <li>Scale analysis to larger datasets</li>
+</ul>
+
+</article>
+</main>
+
+<footer>
+    <div class="social-links">
+        <a href="../resume.pdf">CV</a>
+        <a href="https://github.com/shbatgh">GitHub</a>
+        <a href="https://linkedin.com/in/samuel-boccara-961aa2346">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>
