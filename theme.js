@@ -1,28 +1,39 @@
-// Simple dark mode toggle using latex.css built-in support
+// Dark mode toggle - defaults to dark
 (function() {
-  const STORAGE_KEY = 'theme';
+    // Default to dark if no preference saved
+    if (localStorage.getItem("darkmode") === null) {
+        localStorage.setItem("darkmode", "true");
+    }
 
-  // Apply saved preference or default to dark
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === 'light') {
-    document.body.classList.remove('latex-dark');
-  }
-  // Dark is default (already set in HTML)
+    function refreshDarkMode() {
+        var icon = document.getElementById('darkmode');
+        if (localStorage.getItem("darkmode") === "true") {
+            document.body.classList.add("latex-dark");
+            if (icon) icon.textContent = '☀';
+        } else {
+            document.body.classList.remove("latex-dark");
+            if (icon) icon.textContent = '☾';
+        }
+    }
 
-  // Toggle button
-  const btn = document.querySelector('.theme-toggle');
-  if (btn) {
-    const updateIcon = () => {
-      btn.textContent = document.body.classList.contains('latex-dark') ? '☀️' : '🌙';
-    };
-    updateIcon();
+    function switchDarkMode() {
+        if (localStorage.getItem("darkmode") === "true") {
+            localStorage.setItem("darkmode", "false");
+        } else {
+            localStorage.setItem("darkmode", "true");
+        }
+        refreshDarkMode();
+    }
 
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('latex-dark');
-      localStorage.setItem(STORAGE_KEY,
-        document.body.classList.contains('latex-dark') ? 'dark' : 'light'
-      );
-      updateIcon();
+    // Apply immediately
+    refreshDarkMode();
+
+    // Setup click handler when DOM ready
+    document.addEventListener('DOMContentLoaded', function() {
+        var icon = document.getElementById('darkmode');
+        if (icon) {
+            icon.addEventListener('click', switchDarkMode);
+        }
+        refreshDarkMode();
     });
-  }
 })();

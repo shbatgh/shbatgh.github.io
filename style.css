@@ -1,279 +1,191 @@
-/* Academic website styles */
+/* Base styles */
+html {
+    font-size: 1.1rem;
+    height: 100%;
+    color-scheme: light dark;
+}
 
-/* Layout */
 body {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+    font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
 
 /* Header */
-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #ccc;
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-body.latex-dark header {
-  border-bottom-color: #444;
+.header h1 {
+    margin-bottom: 0.5rem;
 }
 
-header h1 {
-  margin-bottom: 0.75rem;
-  font-size: 2.2rem;
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color, #ddd);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1.05rem;
+body.latex-dark .navbar {
+    border-bottom-color: #444;
 }
 
-nav a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
+.navbar a {
+    text-decoration: none;
+    color: var(--body-color);
+    font-weight: 500;
 }
 
-nav a:hover,
-nav a:focus {
-  border-bottom-color: currentColor;
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 /* Dark mode toggle */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
-  cursor: pointer;
-  font-size: 1rem;
-  color: inherit;
-  opacity: 0.6;
-  transition: opacity 0.2s;
+.icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    user-select: none;
 }
 
-.theme-toggle:hover {
-  opacity: 1;
+.icon:hover {
+    opacity: 1;
 }
 
-/* Main content */
-main {
-  line-height: 1.75;
+/* Links */
+a, a:visited {
+    font-weight: 500;
+    color: var(--body-color);
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
 }
 
 /* Section headings */
 h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
-}
-
-body.latex-dark h2 {
-  border-bottom-color: #444;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.15rem;
-}
-
-/* Publication entries */
-.publication {
-  margin-bottom: 2rem;
-  padding-left: 0;
-}
-
-.pub-title {
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
-}
-
-.pub-authors {
-  margin-bottom: 0.25rem;
-  color: #555;
-}
-
-body.latex-dark .pub-authors {
-  color: #aaa;
-}
-
-.pub-authors .me {
-  font-weight: 600;
-  color: inherit;
-}
-
-body.latex-dark .pub-authors .me {
-  color: #e0e0e0;
-}
-
-.pub-venue {
-  font-style: italic;
-  margin-bottom: 0.35rem;
-  color: #666;
-}
-
-body.latex-dark .pub-venue {
-  color: #999;
-}
-
-.pub-links {
-  font-size: 0.9rem;
-}
-
-.pub-links a {
-  margin-right: 0.75rem;
-}
-
-.pub-badge {
-  display: inline-block;
-  background: #e8f4e8;
-  color: #2d6a2d;
-  padding: 0.15rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-body.latex-dark .pub-badge {
-  background: #1a3a1a;
-  color: #7cb97c;
-}
-
-/* Experience entries */
-.experience {
-  margin-bottom: 1.75rem;
-}
-
-.exp-title {
-  font-weight: 600;
-}
-
-.exp-org {
-  color: #555;
-}
-
-body.latex-dark .exp-org {
-  color: #aaa;
-}
-
-.exp-date {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-body.latex-dark .exp-date {
-  color: #888;
-}
-
-.exp-desc {
-  margin-top: 0.35rem;
-  color: #444;
-}
-
-body.latex-dark .exp-desc {
-  color: #bbb;
-}
-
-/* Project entries */
-.project {
-  margin-bottom: 2rem;
-}
-
-.project-title {
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
-}
-
-.project-tech {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-body.latex-dark .project-tech {
-  color: #999;
-}
-
-.project ul {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
-.project li {
-  margin-bottom: 0.35rem;
-}
-
-/* Remove default list styling for publications */
-.publications-list,
-.experience-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* General list improvements */
-ul {
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Links */
-a {
-  color: #0066cc;
-}
-
-body.latex-dark a {
-  color: #6db3f2;
-}
-
-a:visited {
-  color: #551a8b;
-}
-
-body.latex-dark a:visited {
-  color: #b794d4;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
 /* About section */
-.about p {
-  margin-bottom: 1rem;
+.abstract {
+    margin-bottom: 2rem;
 }
 
-/* Smooth theme transition */
-body {
-  transition: background-color 0.3s, color 0.3s;
+.abstract p {
+    text-align: left;
+    margin-bottom: 0.75rem;
+}
+
+/* Publications */
+.publication {
+    margin-bottom: 1.5rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.pub-authors {
+    margin-bottom: 0.2rem;
+}
+
+.pub-venue {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Experience */
+.experience {
+    margin-bottom: 1.5rem;
+}
+
+.exp-header {
+    margin-bottom: 0.2rem;
+}
+
+.exp-title {
+    font-weight: 600;
+}
+
+.exp-org {
+    opacity: 0.8;
+}
+
+.exp-date {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.exp-desc {
+    margin-top: 0.3rem;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 1.5rem;
+}
+
+.project-title {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.project ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.project li {
+    margin-bottom: 0.3rem;
+}
+
+/* Footer */
+.footnotes {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #ddd);
+    font-size: 0.85rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+body.latex-dark .footnotes {
+    border-top-color: #444;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
+    body {
+        padding: 1rem;
+    }
 
-  nav {
-    gap: 1.25rem;
-  }
-
-  .theme-toggle {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
+    .navbar {
+        gap: 1.5rem;
+    }
 }
