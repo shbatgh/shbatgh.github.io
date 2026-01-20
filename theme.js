@@ -1,66 +1,28 @@
-// Theme toggle functionality with localStorage persistence
+// Simple dark mode toggle using latex.css built-in support
 (function() {
-  const STORAGE_KEY = 'theme-preference';
-  const DARK_CLASS = 'latex-dark';
+  const STORAGE_KEY = 'theme';
 
-  // Get stored preference or default to dark
-  function getStoredTheme() {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'light') return 'light';
-    return 'dark'; // Default to dark
+  // Apply saved preference or default to dark
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === 'light') {
+    document.body.classList.remove('latex-dark');
   }
+  // Dark is default (already set in HTML)
 
-  // Apply theme to body
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      document.body.classList.add(DARK_CLASS);
-    } else {
-      document.body.classList.remove(DARK_CLASS);
-    }
-    updateButtonIcon(theme);
-  }
+  // Toggle button
+  const btn = document.querySelector('.theme-toggle');
+  if (btn) {
+    const updateIcon = () => {
+      btn.textContent = document.body.classList.contains('latex-dark') ? '☀️' : '🌙';
+    };
+    updateIcon();
 
-  // Update button icon based on current theme
-  function updateButtonIcon(theme) {
-    const button = document.querySelector('.theme-toggle');
-    if (button) {
-      // Show sun in dark mode (click to get light), moon in light mode (click to get dark)
-      button.textContent = theme === 'dark' ? '\u2600' : '\u263D';
-      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-  }
-
-  // Toggle between themes
-  function toggleTheme() {
-    const isDark = document.body.classList.contains(DARK_CLASS);
-    const newTheme = isDark ? 'light' : 'dark';
-    localStorage.setItem(STORAGE_KEY, newTheme);
-    applyTheme(newTheme);
-  }
-
-  // Initialize on page load
-  function init() {
-    const theme = getStoredTheme();
-    applyTheme(theme);
-
-    // Set up toggle button
-    const button = document.querySelector('.theme-toggle');
-    if (button) {
-      button.addEventListener('click', toggleTheme);
-      // Keyboard support
-      button.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleTheme();
-        }
-      });
-    }
-  }
-
-  // Run init when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('latex-dark');
+      localStorage.setItem(STORAGE_KEY,
+        document.body.classList.contains('latex-dark') ? 'dark' : 'light'
+      );
+      updateIcon();
+    });
   }
 })();

@@ -1,126 +1,275 @@
-/* Custom styles for dark/light mode toggle */
+/* Academic website styles */
 
-/* Smooth transitions for theme switching */
-body,
-body.latex-dark {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a {
-  transition: color 0.2s ease;
-}
-
-/* Dark mode custom colors (applied when .latex-dark is on body) */
-body.latex-dark {
-  --body-bg: #1a1a2e;
-  --body-color: #e6e6e6;
-  --link-color: #7eb8da;
-  --link-visited: #a8d4ea;
-  background-color: var(--body-bg);
-  color: var(--body-color);
-}
-
-body.latex-dark a {
-  color: var(--link-color);
-}
-
-body.latex-dark a:visited {
-  color: var(--link-visited);
-}
-
-/* Layout improvements */
+/* Layout */
 body {
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
+/* Header */
 header {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid currentColor;
-  opacity: 0.9;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+body.latex-dark header {
+  border-bottom-color: #444;
 }
 
 header h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 2.2rem;
 }
 
 nav {
-  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.05rem;
 }
 
 nav a {
   text-decoration: none;
+  color: inherit;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav a:focus {
+  border-bottom-color: currentColor;
 }
 
-main {
-  line-height: 1.7;
-}
-
-/* Better list styling */
-ul {
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 1rem;
-}
-
-/* Section spacing */
-h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Link hover effects */
-a:hover {
-  opacity: 0.8;
-}
-
-/* Theme toggle button */
+/* Dark mode toggle */
 .theme-toggle {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: transparent;
+  background: none;
   border: 1px solid currentColor;
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: inherit;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 1000;
+  opacity: 0.6;
+  transition: opacity 0.2s;
 }
 
 .theme-toggle:hover {
   opacity: 1;
 }
 
-.theme-toggle:focus {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+/* Main content */
+main {
+  line-height: 1.75;
 }
 
-.theme-toggle:active {
-  transform: scale(0.95);
+/* Section headings */
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
 }
 
-/* Responsive adjustments */
+body.latex-dark h2 {
+  border-bottom-color: #444;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+/* Publication entries */
+.publication {
+  margin-bottom: 2rem;
+  padding-left: 0;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.pub-authors {
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+body.latex-dark .pub-authors {
+  color: #aaa;
+}
+
+.pub-authors .me {
+  font-weight: 600;
+  color: inherit;
+}
+
+body.latex-dark .pub-authors .me {
+  color: #e0e0e0;
+}
+
+.pub-venue {
+  font-style: italic;
+  margin-bottom: 0.35rem;
+  color: #666;
+}
+
+body.latex-dark .pub-venue {
+  color: #999;
+}
+
+.pub-links {
+  font-size: 0.9rem;
+}
+
+.pub-links a {
+  margin-right: 0.75rem;
+}
+
+.pub-badge {
+  display: inline-block;
+  background: #e8f4e8;
+  color: #2d6a2d;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+body.latex-dark .pub-badge {
+  background: #1a3a1a;
+  color: #7cb97c;
+}
+
+/* Experience entries */
+.experience {
+  margin-bottom: 1.75rem;
+}
+
+.exp-title {
+  font-weight: 600;
+}
+
+.exp-org {
+  color: #555;
+}
+
+body.latex-dark .exp-org {
+  color: #aaa;
+}
+
+.exp-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+body.latex-dark .exp-date {
+  color: #888;
+}
+
+.exp-desc {
+  margin-top: 0.35rem;
+  color: #444;
+}
+
+body.latex-dark .exp-desc {
+  color: #bbb;
+}
+
+/* Project entries */
+.project {
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+body.latex-dark .project-tech {
+  color: #999;
+}
+
+.project ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project li {
+  margin-bottom: 0.35rem;
+}
+
+/* Remove default list styling for publications */
+.publications-list,
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* General list improvements */
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+}
+
+body.latex-dark a {
+  color: #6db3f2;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+body.latex-dark a:visited {
+  color: #b794d4;
+}
+
+/* About section */
+.about p {
+  margin-bottom: 1rem;
+}
+
+/* Smooth theme transition */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   body {
     padding: 1rem;
+  }
+
+  nav {
+    gap: 1.25rem;
   }
 
   .theme-toggle {

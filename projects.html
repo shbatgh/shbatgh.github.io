@@ -9,45 +9,54 @@
 </head>
 <body class="latex-dark">
   <button class="theme-toggle" aria-label="Toggle theme"></button>
+
   <header>
     <h1>Sam</h1>
     <nav>
-      <a href="index.html">Publications</a> |
-      <a href="projects.html">Projects</a> |
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
     </nav>
   </header>
 
   <main>
-    <article>
+    <section>
       <h2>Projects</h2>
 
-      <h3>Automated 3D Visualization of Cell Behavior</h3>
-      <p><em>Python, PyTorch, Cellpose</em></p>
-      <ul>
-        <li>Regeneron ISEF 2025 Finalist, representing NYC at the international competition.</li>
-        <li>AI pipeline to automatically segment cells in microscopy videos and reconstruct 3D meshes for quantitative analysis of cell dynamics.</li>
-        <li>Deployed at Columbia's Kalderon Lab for germarium dataset analysis, enabling novel biological findings.</li>
-        <li>Unsupervised clustering framework (spectral, k-means, HDBSCAN) with automatic method selection.</li>
-      </ul>
+      <div class="project">
+        <div class="project-title">Automated 3D Visualization of Cell Behavior</div>
+        <div class="project-tech">Python, PyTorch, Cellpose</div>
+        <ul>
+          <li>Regeneron ISEF 2025 Finalist, representing NYC at the international competition.</li>
+          <li>AI pipeline to automatically segment cells in microscopy videos and reconstruct 3D meshes for quantitative analysis of cell dynamics.</li>
+          <li>Deployed at Columbia's Kalderon Lab for germarium dataset analysis, enabling novel biological findings.</li>
+          <li>Unsupervised clustering framework (spectral, k-means, HDBSCAN) with automatic method selection.</li>
+        </ul>
+      </div>
 
-      <h3>Arbitrage Trading Bot</h3>
-      <p><em>Python, Websockets, REST, NLP</em></p>
-      <ul>
-        <li>Cross-exchange arbitrage bot for Polymarket + Kalshi, standardizing ~50,000 markets for cross-platform comparison.</li>
-        <li>NLP matching pipeline using embedding models for semantic retrieval and Gemini Flash API verification.</li>
-        <li>Low-latency monitoring + execution via websocket streaming for live quotes/order books.</li>
-        <li>Collected L2 order book data for top 2,000 markets over 4 months (100M+ updates) for backtesting.</li>
-      </ul>
+      <div class="project">
+        <div class="project-title">Arbitrage Trading Bot</div>
+        <div class="project-tech">Python, Websockets, REST, NLP</div>
+        <ul>
+          <li>Cross-exchange arbitrage bot for Polymarket + Kalshi, standardizing ~50,000 markets for cross-platform comparison.</li>
+          <li>NLP matching pipeline using embedding models for semantic retrieval and Gemini Flash API verification.</li>
+          <li>Low-latency monitoring + execution via websocket streaming for live quotes/order books.</li>
+          <li>Collected L2 order book data for top 2,000 markets over 4 months (100M+ updates) for backtesting.</li>
+        </ul>
+      </div>
 
-      <h3>C++ Linear Algebra and Neural Network Library</h3>
-      <p><em>C++</em></p>
-      <ul>
-        <li>Linear algebra library (matrix/vector ops, dynamic memory management).</li>
-        <li>MLP framework with backpropagation, activations, and SGD training.</li>
-      </ul>
-    </article>
+      <div class="project">
+        <div class="project-title">C++ Linear Algebra and Neural Network Library</div>
+        <div class="project-tech">C++</div>
+        <ul>
+          <li>Linear algebra library (matrix/vector ops, dynamic memory management).</li>
+          <li>MLP framework with backpropagation, activations, and SGD training.</li>
+        </ul>
+      </div>
+
+    </section>
   </main>
+
   <script src="theme.js"></script>
 </body>
 </html>

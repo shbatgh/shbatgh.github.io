@@ -3,54 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sam - Publications</title>
+  <title>Sam</title>
   <link rel="stylesheet" href="https://latex.vercel.app/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="latex-dark">
   <button class="theme-toggle" aria-label="Toggle theme"></button>
+
   <header>
     <h1>Sam</h1>
     <nav>
-      <a href="index.html">Publications</a> |
-      <a href="projects.html">Projects</a> |
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
     </nav>
   </header>
 
   <main>
-    <article>
+    <section class="about">
       <h2>About</h2>
       <p>I'm a Computer Science & Mathematics student at the University of Maryland, College Park. My research interests include machine learning for biomedical applications, single-cell genomics, and computer vision.</p>
       <p>Currently an Undergraduate Research Assistant at the UMD Institute for Health Computing, working on single-cell RNA-seq modeling.</p>
+    </section>
 
+    <section>
       <h2>Publications</h2>
-      <ul>
-        <li>
-          <strong>4D Imaging of the Germarium Suggests That Follicle Stem Cells and Follicle Cells Self-Organize Around Germline Cysts.</strong><br>
-          Amy Reilein, Taj R Chhabra, <strong>Samuel Boccara</strong>, Shafrir Pervez, Daniel Kalderon.<br>
-          <em>Oral presentation at the 67th Annual Drosophila Research Conference, March 2026.</em>
-        </li>
-        <li>
-          <strong>Synthetic Procedural Noise and Neural Networks: Enhancing Biomedical Images with Purely Artificial Data</strong><br>
-          Viacheslav Mazlin, <strong>Samuel Boccara</strong>.<br>
-          <em>Accepted for presentation at SPIE Photonics West 2025.</em>
-        </li>
-      </ul>
+      <div class="publications-list">
 
+        <div class="publication">
+          <div class="pub-title">4D Imaging of the Germarium Suggests That Follicle Stem Cells and Follicle Cells Self-Organize Around Germline Cysts</div>
+          <div class="pub-authors">Amy Reilein, Taj R Chhabra, <span class="me">Samuel Boccara</span>, Shafrir Pervez, Daniel Kalderon</div>
+          <div class="pub-venue">Oral presentation at the 67th Annual Drosophila Research Conference, March 2026</div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-title">Synthetic Procedural Noise and Neural Networks: Enhancing Biomedical Images with Purely Artificial Data</div>
+          <div class="pub-authors">Viacheslav Mazlin, <span class="me">Samuel Boccara</span></div>
+          <div class="pub-venue">SPIE Photonics West 2025</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
       <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Undergraduate Research Assistant</strong> - UMD Institute for Health Computing (Oct. 2025 - Present)<br>
-          Single-cell RNA-seq modeling, benchmarking Transformers/Diffusion/VAEs/Optimal Transport approaches, LoRA fine-tuning.
-        </li>
-        <li>
-          <strong>Research Intern</strong> - Institut Langevin, Paris (Jun. 2024 - Aug. 2024)<br>
-          Generative models for healthcare imaging, CNN denoising/super-resolution, Stable Diffusion fine-tuning for synthetic medical images.
-        </li>
-      </ul>
-    </article>
+      <div class="experience-list">
+
+        <div class="experience">
+          <div><span class="exp-title">Undergraduate Research Assistant</span> <span class="exp-org">@ UMD Institute for Health Computing</span></div>
+          <div class="exp-date">Oct. 2025 - Present</div>
+          <div class="exp-desc">Single-cell RNA-seq modeling, benchmarking Transformers/Diffusion/VAEs/Optimal Transport approaches, LoRA fine-tuning.</div>
+        </div>
+
+        <div class="experience">
+          <div><span class="exp-title">Research Intern</span> <span class="exp-org">@ Institut Langevin, Paris</span></div>
+          <div class="exp-date">Jun. 2024 - Aug. 2024</div>
+          <div class="exp-desc">Generative models for healthcare imaging, CNN denoising/super-resolution, Stable Diffusion fine-tuning for synthetic medical images.</div>
+        </div>
+
+      </div>
+    </section>
   </main>
+
   <script src="theme.js"></script>
 </body>
 </html>
