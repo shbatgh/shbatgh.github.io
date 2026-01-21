@@ -17,10 +17,19 @@ body {
 .header {
     text-align: center;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .header h1 {
     margin-bottom: 0.5rem;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
 }
 
 .social-links {

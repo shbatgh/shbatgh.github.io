@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam - C++ Linear Algebra and Neural Network Library</title>
+    <title>Sam Boccara - Autograd Engine and Neural Networks in Pure C++</title>
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../theme.js"></script>
@@ -11,7 +11,8 @@
 <body class="latex-dark">
 
 <div class="header">
-    <h1>Sam</h1>
+    <img src="../logo.svg" alt="Logo" class="header-logo">
+    <h1>Sam Boccara</h1>
 </div>
 
 <div class="navbar">
@@ -24,10 +25,30 @@
 <main>
 <article>
 
-<h2>C++ Linear Algebra and Neural Network Library</h2>
+<h2>Autograd Engine and Neural Networks in Pure C++</h2>
 <p class="project-tech">C++</p>
 
-<p>Add more details about this project here.</p>
+<p>I built a small deep learning framework from the ground up in C++. My goal was to understand exactly how neural networks work under the hood: matrix multiplication, backpropagation, and automatic differentiation.</p>
+
+<h3>The Core: Compile-Time Matrices</h3>
+
+<p>The foundation is a templated <code>Matrix&lt;T, Rows, Cols&gt;</code> class where dimensions are baked into the type at compile time. This means the compiler catches dimension mismatches before you even run the code. Try to multiply a 16×32 by a 10×5 and it won't compile. I implemented all the standard operations: element-wise add, subtract, multiply, transpose, power, and of course matrix multiplication. The matmul is a straightforward triple-nested loop, but because everything is statically sized, the compiler can optimize it pretty well.</p>
+
+<h3>Automatic Differentiation</h3>
+
+<p>On top of the matrix library sits an autograd system inspired by Karpathy's micrograd. Every value is wrapped in a <code>Value&lt;T&gt;</code> smart pointer that tracks both the data and its gradient. Operations like matmul, relu, tanh, pow, and exp return new Value nodes that remember their parents and know how to propagate gradients backward. When you call <code>.backward()</code> on a loss, it builds a topological ordering of the computation graph and walks it in reverse, accumulating gradients using the chain rule. The cool part is that the backward functions are stored as lambdas that capture the relevant tensors, so each operation carries its own derivative logic.</p>
+
+<h3>Training an MLP</h3>
+
+<p>To test it all, I built a multi-layer perceptron that learns to approximate $y = x^2$. The network has four layers (1→16→32→16→1) with ReLU activations. During training, it does the standard forward pass through matrix multiplications and activations, computes MSE loss, then calls backward to get gradients. I implemented a simple learning rate decay (exponentially decreasing, clamped at 0.05) to help it converge better.</p>
+
+<h3>Performance Testing</h3>
+
+<p>I also wrote benchmarks to stress-test the matrix multiplication. 4000×4000 matrices multiplied together, timed down to the second. The identity matrix test confirms correctness ($I \times B$ should equal $B$), while the random matrix test measures raw throughput. On my machine it handles the 4k×4k multiply in a reasonable time, though obviously this isn't going to beat BLAS or anything.</p>
+
+<h3>What I Learned</h3>
+
+<p>This project was really about understanding what's actually going on. Writing backprop by hand for matrix operations (especially getting the shapes right for gradient accumulation) forced me to actually understand the math instead of just calling <code>loss.backward()</code>. The C++ template stuff was interesting too. Catching shape errors at compile time instead of runtime is pretty satisfying, even if the error messages are kind of a nightmare sometimes.</p>
 
 </article>
 </main>
