@@ -36,11 +36,11 @@
 
 <h3>How It's Built</h3>
 
+<p>Everything runs on Python with async code to handle thousands of WebSocket messages per second. The arbitrage detector and data collector both run on AWS EC2. I had to figure out the best server location by testing network latency to both exchanges from different regions. It turns out Polymarket's servers are in London and Kalshi's are on the US East Coast, so I had to find a middle ground. The whole project taught me a lot about real-time systems, working with financial APIs, and managing large-scale data pipelines.</p>
+
 <figure>
     <img src="../architecture.svg" alt="System architecture diagram">
 </figure>
-
-<p>Everything runs on Python with async code to handle thousands of WebSocket messages per second. The arbitrage detector and data collector both run on AWS EC2. I had to figure out the best server location by testing network latency to both exchanges from different regions. It turns out Polymarket's servers are in London and Kalshi's are on the US East Coast, so I had to find a middle ground. The whole project taught me a lot about real-time systems, working with financial APIs, and managing large-scale data pipelines.</p>
 
 </article>
 </main>
