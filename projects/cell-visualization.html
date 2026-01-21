@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Boccara - Automated 3D Visualization of Cell Behavior</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.svg">
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../theme.js"></script>
@@ -11,7 +12,6 @@
 <body class="latex-dark">
 
 <div class="header">
-    <img src="../logo.svg" alt="Logo" class="header-logo">
     <h1>Sam Boccara</h1>
 </div>
 
@@ -45,13 +45,7 @@
 <p>After segmentation, we generate 3D meshes for each identified cell. This mesh-based representation interpolates across the outlines in order to infer cell shape and morphology allowing scientists to more easily understand the spatial context within the tissue and temporal changes in cell structure.</p>
 
 <h4>3. Feature Extraction</h4>
-<p>We extract morphological, spatial, and temporal features using our 3D meshes:</p>
-<ul>
-    <li><strong>Morphological:</strong> cell volume, surface area, shape descriptors</li>
-    <li><strong>Spatial:</strong> position, orientation, neighborhood relationships</li>
-    <li><strong>Temporal:</strong> velocity, acceleration</li>
-</ul>
-<p>These features serve as numerical representations of cell behavior over time.</p>
+<p>We extract morphological, spatial, and temporal features using our 3D meshes (cell volume, surface area, position, velocity, acceleration, etc). These features serve as numerical representations of cell behavior over time.</p>
 
 <h4>4. Unsupervised Clustering</h4>
 <p>We apply clustering algorithms (K-means, spectral, and HDBSCAN) to group cells with similar properties or behaviors. This reveals regions with coordinated growth patterns, cells transitioning between developmental states, and spatial organization principles.</p>
@@ -60,14 +54,10 @@
 <p>The software rendering is a Blender add-on, which allows scientists to easily visualize segmentation results in 2D slices and 3D renderings, explore generated meshes interactively, and analyze the organisms behavior.The platform includes a GUI that enables researchers to easily perform clustering analysis.</p>
 
 <h3>Impact</h3>
-<p>BioVision makes germarium data easier to interpret and quantify, enabling researchers to:</p>
-<ul>
-    <li>Identify cellular patterns that would be invisible to manual analysis</li>
-    <li>Quantify cell behaviors objectively</li>
-    <li>Test hypotheses about developmental processes</li>
-    <li>Scale analysis to larger datasets</li>
-</ul>
-
+<p>BioVision makes germarium data easier to interpret and quantify, enabling researchers to: 
+    identify cellular patterns that would be invisible to manual analysis, quantify cell behaviors objectively,
+    quantify cell behaviors objectively, test hypotheses about developmental processes,
+    and scale analysis to larger datasets</p>
 </article>
 </main>
 
