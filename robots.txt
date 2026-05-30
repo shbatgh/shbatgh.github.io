@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://shbatgh.github.io/sitemap.xml
