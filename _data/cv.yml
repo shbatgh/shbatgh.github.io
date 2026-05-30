@@ -1,0 +1,134 @@
+cv:
+  name: Sam Boccara
+  label: Machine learning for biology
+  email: shboccara@gmail.com
+  website: https://shbatgh.github.io
+  location: New York, NY / Pittsburgh, PA
+  image: ""
+  summary: >-
+    Sophomore transfer to Carnegie Mellon's School of Computer Science studying computational biology. Current research in Wei Li's lab at the University of Maryland Institute for Health Computing covers perturbation-response modeling with optimal transport and flow matching, LoRA adaptation of single-cell foundation models, and benchmarks for paired MERFISH + microscopy data.
+
+  social_networks:
+    - network: GitHub
+      username: shbatgh
+    - network: LinkedIn
+      username: samuel-boccara-961aa2346
+
+  sections:
+    Education:
+      - institution: Carnegie Mellon University
+        location: Pittsburgh, PA
+        studyType: B.S. in Computational Biology
+        area: School of Computer Science; incoming sophomore transfer
+        start_date: 2026-08
+        end_date: 2029-05
+      - institution: University of Maryland, College Park
+        location: College Park, MD
+        studyType: Coursework toward B.S. in Computer Science & Mathematics
+        area: GPA 3.95/4.0
+        start_date: 2025-08
+        end_date: 2026-05
+        highlights:
+          - "Coursework: Multivariable Calculus, Linear Algebra, Differential Equations I & II, Algorithms, Computer Systems, Programming Languages, Discrete Structures."
+          - "Activities: BigThink (Audio-ML), Smith Investment Fund."
+      - institution: Hunter College High School
+        location: New York, NY
+        studyType: High School Diploma
+        area: GPA 3.9/4.0; SAT 1570
+        start_date: 2019-09
+        end_date: 2025-06
+        highlights:
+          - "Regeneron ISEF finalist; ML Club co-president."
+
+    Experience:
+      - company: Wei Li Lab, University of Maryland Institute for Health Computing
+        position: Undergraduate Research Assistant
+        location: North Bethesda, MD
+        start_date: 2025-11
+        end_date: Present
+        summary: Part-time during the academic year; full-time summer 2026.
+        highlights:
+          - "Built PyTorch pipelines using optimal-transport conditional flow matching to predict RNA-seq profiles from cellular imaging and to learn multimodal representations."
+          - "Developed PertFlow-style perturbation prediction code with ESMC perturbation embeddings, cell-type-restricted Sinkhorn OT pairing, MLP and flow-matching heads, and OOD perturbation evaluation."
+          - "Reproduced single-cell RNA-seq baselines by adapting open-source pipelines to lab data, running standardized training/inference, and generating comparison predictions."
+          - "Implemented LoRA/PEFT fine-tuning for single-cell foundation models, varying rank, target modules, and training schedules to balance accuracy and compute."
+          - "Built Perturb-Multimodal data tooling for exact MERFISH/image matching, held-out-batch perturbation benchmarks, and a zstd-sharded cache for roughly 2.2M 18-channel microscopy crops."
+      - company: Institut Langevin
+        position: Research Intern
+        location: Paris, France
+        start_date: Jun 2024
+        end_date: Aug 2024
+        highlights:
+          - "Built CNN-based denoising and super-resolution models for corneal nerve microscopy."
+          - "Fine-tuned Stable Diffusion 1.5 to generate synthetic microscopy training images and evaluated downstream segmentation/denoising performance using purely artificial data."
+
+    Projects:
+      - name: "BioVision: automated 3D visualization of cell behavior"
+        url: /projects/biovision/
+        summary: Regeneron ISEF 2025 finalist project for quantitative 4D microscopy analysis.
+        highlights:
+          - "Designed a Python/PyTorch pipeline to segment cells in microscopy videos, track them across slices/timepoints, reconstruct 3D meshes, and export morphology and movement features."
+          - "Collaborated with Columbia's Kalderon Lab on Drosophila germarium data, contributing to a co-authored conference abstract."
+      - name: Prediction-market arbitrage monitor
+        url: /projects/prediction-market-arbitrage/
+        summary: Real-time Kalshi/Polymarket arbitrage detector with semantic market matching and user-gated execution.
+        highlights:
+          - "Standardized roughly 50,000 markets, used embedding retrieval plus Gemini verification for event matching, and streamed live order books over WebSockets."
+          - "Computed fee-aware hedged edge, APR, and expected profit with roughly 100 ms quote-to-alert latency; collected 100M+ Polymarket L2 updates for backtesting."
+      - name: Autograd engine and neural networks in pure C++
+        url: /projects/cpp-autograd/
+        summary: Reverse-mode automatic differentiation engine, linear algebra layer, and MLP framework.
+        highlights:
+          - "Implemented dynamic computational graphs, backward passes for arbitrary DAGs, matrix/vector operations, activations, SGD, and training loops."
+
+    Publications:
+      - title: "4D Imaging of the Germarium Suggests That Follicle Stem Cells and Follicle Cells Self-Organize Around Germline Cysts"
+        date: 2026-03
+        publisher: 67th Annual Drosophila Research Conference
+        summary: "Amy Reilein, Taj R. Chhabra, Samuel Boccara, Shafrir Pervez, Daniel Kalderon. Abstract accepted for oral presentation."
+      - title: "PertTF: Context-Aware AI Modeling for Genome-Scale and Cross-System Perturbation Prediction"
+        date: 2026-07
+        publisher: Intelligent Systems for Microbiology
+        summary: "Yangqi Su, Dingyu Liu, Vipin Menon, Bicna Song, Samuel Boccara, Alon Katz, Nan Zhang, Jiahui Zhao, Nan Hu, Huan Zhao, Lei Wang, Mpathi Nzima, Gary Hon, Bharath Swargam, Seth Ament, Yarui Diao, Hanrui Zhang, Lumen Chao, Wei Li, Danwei Huangfu. Accepted for poster presentation."
+      - title: "Synthetic Procedural Noise and Neural Networks: Enhancing Biomedical Images with Purely Artificial Data"
+        date: 2025-01
+        publisher: SPIE Photonics West
+        summary: "Viacheslav Mazlin, Samuel Boccara. Accepted for oral presentation."
+
+    Honors and Awards:
+      - title: ISEF Air Force Research Laboratory Award
+        date: 2025
+      - title: USACO Gold
+        date: Mar 2025
+
+    Skills:
+      - name: Programming
+        keywords:
+          - Python
+          - C++
+          - Bash
+          - Java
+      - name: Machine learning
+        keywords:
+          - PyTorch
+          - JAX
+          - Hugging Face
+          - PEFT/LoRA
+          - diffusion/flow matching
+          - optimal transport
+          - Weights & Biases
+      - name: Computational biology
+        keywords:
+          - Scanpy
+          - AnnData/H5AD
+          - single-cell RNA-seq
+          - Perturb-seq
+          - MERFISH
+          - microscopy image analysis
+      - name: Systems and tools
+        keywords:
+          - Git
+          - Linux
+          - AsyncIO
+          - WebSockets
+          - REST APIs
